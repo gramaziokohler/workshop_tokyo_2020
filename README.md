@@ -73,20 +73,9 @@ During this session we will install and play around with `COMPAS` core framework
     * [Append nested objects to the scene](examples/035_append_collision_meshes.py)
     * [Remove objects from the scene](examples/036_remove_collision_mesh.py)
 * [Grasshopper Playground](examples/038_robot_playground_ur5.ghx)
-
-### Path planning and assembly processes
-
-* [Docker configuration to launch ROS & MoveIt](docker/)
-* [Assembly Playground](examples/050_robot_assembly.ghx)
 * Attaching gripper/tool:
   * [Attach tool to last link of the robot](examples/041_attach_tool.py)
   * [Plan cartesian motion with attached tool](examples/042_plan_cartesian_motion_with_attached_tool.py)
-* Assembly elements (e.g. bricks):
-  * [Add assembly element to planning scene](examples/043_create_element_and_add_to_planning_scene.py)
-  * [Attach assembly element to gripper](examples/044_add_element_as_attached_collision_object.py)
-* Pick and place examples:
-  * [Pick and place](examples/045_pick_and_place.py)
-  * [Pick and place Stack](examples/046_pick_and_place_stack.py)
 
 ## Requirements
 
