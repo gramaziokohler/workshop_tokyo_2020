@@ -50,7 +50,8 @@ During this session we will install and play around with `COMPAS` core framework
 ### Robot model and ROS
 
 * [Docker configuration to launch ROS & MoveIt](docker/)
-* [Open MoveIt! in your browser](http://localhost:8080/vnc.html?resize=scale&autoconnect=true) (once UR5 docker compose has been started)
+* Open MoveIt! in your browser:
+  * `http://localhost:8080/vnc.html?resize=scale&autoconnect=true`
 * Basic examples:
   * [Programatically define a robot](examples/021_define_model.py)
   * [Load robots from Github](examples/022_robot_from_github.py)
