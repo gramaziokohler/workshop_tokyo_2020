@@ -58,7 +58,7 @@ During this session we will install and play around with `COMPAS` core framework
   * [Load robots from ROS](examples/023_robot_from_ros.py)
   * [Visualize robots in Rhino](examples/024_robot_artist_rhino.py)
   * [Visualize robots in Grasshopper](examples/025_robot_artist_grasshopper.ghx)
-  * [Build your own robot](examples/026_build_your_own_robot.py)
+  * [Build your own robot](examples/026_build_your_own_robot_rhino.py)
 * Basic ROS examples:
   * [Verify connection](examples/027_check_connection.py)
   * The cannonical example of ROS: chatter nodes

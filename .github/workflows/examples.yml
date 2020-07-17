@@ -1,0 +1,60 @@
+name: test-examples
+
+on: push
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        name: [
+          "windows-py38",
+          "macos-py38",
+          "ubuntu-py38",
+        ]
+        include:
+          - name: "windows-py38"
+            os: windows-latest
+            python-version: 3.8
+          - name: "macos-py38"
+            os: macos-latest
+            python-version: 3.8
+          - name: "ubuntu-py38"
+            os: ubuntu-latest
+            python-version: 3.8
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install cython --install-option="--no-cython-compile"
+      - name: Install
+        run: |
+          python -m pip install --no-cache-dir compas_fab==0.11
+      - name: Run tests
+        run: |
+          python examples/001_several_ways_to_construct_frame.py
+          python examples/002_point_in_frame.py
+          python examples/002_point_in_frame.py
+          python examples/003_frame_in_frame.py
+          python examples/004_box_from_the_world_to_local.py
+          python examples/006_examples_transformation.py
+          python examples/007_inverse_transformation.py
+          python examples/008_premultiply_transformations.py
+          python examples/009_pre_vs_post_multiplication.py
+          python examples/010_decompose_transformation.py
+          python examples/011_transform_point_and_vector.py
+          python examples/012_transform_multiple.py
+          python examples/013_change_basis_vs_between_frames.py
+          python examples/014_box_from_the_world_to_local.py
+          python examples/016_several_ways_to_construct_rotation.py
+          python examples/017_robot_tcp_orientations.py
+          python examples/018_euler_angles.py
+          python examples/019_axis_angle.py
+          python examples/020_quaternion.py
+          python examples/021_define_model.py
+          python examples/022_robot_from_github.py
