@@ -49,7 +49,7 @@ During this session we will install and play around with `COMPAS` core framework
 
 ### Robot model and ROS
 
-* [Docker configuration to launch ROS & MoveIt](docker/docker-ur5/)
+* [Docker configuration to launch ROS & MoveIt](docker/)
 * [Open MoveIt! in your browser](http://localhost:8080/vnc.html?resize=scale&autoconnect=true) (once UR5 docker compose has been started)
 * Basic examples:
   * [Programatically define a robot](examples/021_define_model.py)
@@ -76,7 +76,7 @@ During this session we will install and play around with `COMPAS` core framework
 
 ### Path planning and assembly processes
 
-* [Docker configuration to launch ROS & MoveIt](docker/docker-ur5/)
+* [Docker configuration to launch ROS & MoveIt](docker/)
 * [Assembly Playground](examples/050_robot_assembly.ghx)
 * Attaching gripper/tool:
   * [Attach tool to last link of the robot](examples/041_attach_tool.py)
