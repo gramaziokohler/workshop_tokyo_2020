@@ -1,7 +1,10 @@
 import os
+import time
+
 from compas.geometry import Frame
 from compas_fab.backends import RosClient
 from compas_fab.robots import Configuration
+from compas_fab.robots import PlanningScene
 from compas_fab.robots import Tool
 
 HERE = os.path.dirname(__file__)
@@ -16,9 +19,11 @@ safelevel_height = 0.05
 
 with RosClient('localhost') as client:
     robot = client.load_robot()
+    scene = PlanningScene(robot)
 
     # 1. Set tool
     robot.attach_tool(tool)
+    scene.add_attached_tool()
 
     # 2. Define start configuration
     start_configuration = Configuration.from_revolute_values([-5.961, 4.407, -2.265, 5.712, 1.571, -2.820])
@@ -38,3 +43,9 @@ with RosClient('localhost') as client:
     print("Computed cartesian path with %d configurations, " % len(trajectory.points))
     print("following %d%% of requested trajectory." % (trajectory.fraction * 100))
     print("Executing this path at full speed would take approx. %.3f seconds." % trajectory.time_from_start)
+
+    # Remove the tool
+    scene.remove_attached_tool()
+    scene.remove_collision_mesh(tool.name)
+    robot.detach_tool()
+    time.sleep(1)

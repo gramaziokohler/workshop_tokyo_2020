@@ -16,7 +16,8 @@ with RosClient('localhost') as client:
     # Attach the tool
     robot.attach_tool(tool)
     scene.add_attached_tool()
-    time.sleep(1)
+
+    time.sleep(3)
 
     # Remove the tool
     scene.remove_attached_tool()
