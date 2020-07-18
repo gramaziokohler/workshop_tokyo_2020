@@ -14,7 +14,7 @@ During this session we will install and play around with `COMPAS` core framework
 
 ## Resources
 
-* **Presentation**: [Slides](https://docs.google.com/presentation/d/1MwbF9ibyxKD2Nxk989vYtSyW_or0pXSVWBnFI-EQtdM/edit?usp=sharing)
+* **Presentation**: [Slides](slides.pdf)
 * **Documentation**:
   * [COMPAS API Reference](https://compas-dev.github.io/main/api.html)
   * [COMPAS FAB API Reference](https://gramaziokohler.github.io/compas_fab/latest/reference.html)
@@ -53,7 +53,7 @@ During this session we will install and play around with `COMPAS` core framework
 * Open MoveIt! in your browser:
   * `http://localhost:8080/vnc.html?resize=scale&autoconnect=true`
 * Basic examples:
-  * [Programatically define a robot](examples/021_define_model.py)
+  * [Programmatically define a robot](examples/021_define_model.py)
   * [Load robots from Github](examples/022_robot_from_github.py)
   * [Load robots from ROS](examples/023_robot_from_ros.py)
   * [Visualize robots in Rhino](examples/024_robot_artist_rhino.py)
