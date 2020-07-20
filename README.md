@@ -16,7 +16,7 @@ During this session we will install and play around with `COMPAS` core framework
 
 * **Presentation**: [Slides](slides.pdf)
 * **Documentation**:
-  * [COMPAS API Reference](https://compas-dev.github.io/main/api.html)
+  * [COMPAS API Reference](https://compas-dev.github.io/compas/api.html)
   * [COMPAS FAB API Reference](https://gramaziokohler.github.io/compas_fab/latest/reference.html)
 
 ## Examples
